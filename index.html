@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/cake-favicon.png">
+  <title>Since</title>
+  </head>
+<body>
+   <div id="container">
+
+    <div id="clock">
+      <p id="demo"></p>
+    </div>
+
+    <div class="since">
+     <p>...ago the world has become a better place</p>
+    </div>
+   
+    <div>
+     <p class="sign">designed by</p>
+     <a class="logo-like" href="https://fb.com/szabocsilla.royalgraphic" target="_blank"><img src="assets/logo.png" alt="logo"></a>
+    </div>
+
+  </div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Febr 1, 1981 00:45:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = now - countDownDate;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  if (hours <= 9) {
+    hours = "0" + hours;
+  }
+  if (minutes <= 9) {
+    minutes = "0" + minutes;
+  }
+  if (seconds <= 9) {
+    seconds = "0" + seconds;
+  }
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d  " + hours + "h "
+  + minutes + "m  " + seconds + "s  ";
+    
+}, 1000);
+  
+ var div = document.getElementById("container");
+
+function getRandomColor() {
+  return "hsl(" + 360 * Math.random() + ',' +
+             (25 + 70 * Math.random()) + '%,' + 
+             (85 + 10 * Math.random()) + '%)'
+}
+
+function changeColor(){
+  div.style.backgroundColor= getRandomColor();
+}
+
+setInterval(changeColor,1000);
+  
+</script>
+
+</body>
+</html>

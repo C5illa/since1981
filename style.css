@@ -1,0 +1,55 @@
+#demo {
+    font-size: 5rem;
+    letter-spacing: -.1rem;
+    text-align: center;
+}
+
+#clock {
+    place-self: end center;
+    font-family: 'Azeret Mono', monospace;
+}
+
+.since {
+    font-size: 1.3rem;
+    place-self: start center;
+    text-align: center;
+    padding-top: .3rem;
+ }   
+
+.sign {
+    font-size: .6rem;
+    text-align: center;
+    margin-bottom: 5.5px;
+    place-self: end center;
+} 
+
+.logo-like {
+    place-self: center;
+}
+
+img {
+    max-height: 18px;
+}
+  
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 40% 10%;
+    place-items: center;
+    font-family: 'Quicksand', sans-serif; 
+}
+
+a:hover {
+    display: inline;
+    content: url(assets/like.png);
+    max-height: 18px;
+    margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+#demo {
+    font-size: 2.7rem;
+    }
+}
